@@ -1,0 +1,61 @@
+<div class="row-layout group">
+  <div class="row-layout group_1">
+    <button igxButton="icon" igxRipple [igxToggleAction]="navDrawer" class="button">
+      <igx-icon>
+        menu
+      </igx-icon>
+    </button>
+    <img src="https://i.ibb.co/syrwz7h/travel-app.png" routerLink="/home/login" class="image" />
+  </div>
+  <div class="row-layout group_2">
+    <button igxButton="icon" igxRipple class="button_1">
+      <igx-icon>
+        notifications
+      </igx-icon>
+    </button>
+    <igx-avatar src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&crop=faces&w=240&h=240&q=80" [roundShape]="true" class="avatar"></igx-avatar>
+  </div>
+</div>
+<div class="view-container">
+  <router-outlet></router-outlet>
+</div>
+<igx-nav-drawer [pinThreshold]="0" width="320px" #navDrawer class="nav-drawer">
+  <ng-template igxDrawer>
+    <div igxDrawerItem igxRipple routerLink="/in-app/dashboard">
+      <igx-icon class="icon">
+        dashboard
+      </igx-icon>
+      <span>Dashboard</span>
+    </div>
+    <div igxDrawerItem igxRipple>
+      <igx-icon class="icon">
+        image_search
+      </igx-icon>
+      <span>Discover</span>
+    </div>
+    <div igxDrawerItem igxRipple>
+      <igx-icon class="icon">
+        playlist_add_check
+      </igx-icon>
+      <span>Travel lists</span>
+    </div>
+    <div igxDrawerItem igxRipple routerLink="/in-app/articles">
+      <igx-icon class="icon">
+        chrome_reader_mode
+      </igx-icon>
+      <span>Articles</span>
+    </div>
+    <div igxDrawerItem igxRipple>
+      <igx-icon class="icon">
+        question_answer
+      </igx-icon>
+      <span>FAQ</span>
+    </div>
+    <div igxDrawerItem igxRipple>
+      <igx-icon class="icon">
+        settings
+      </igx-icon>
+      <span>Settings</span>
+    </div>
+  </ng-template>
+</igx-nav-drawer>

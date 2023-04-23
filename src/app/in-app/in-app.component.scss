@@ -1,0 +1,78 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.row-layout {
+  display: flex;
+}
+.group {
+  background-color: hsla(var(--ig-gray-900));
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: flex-start;
+  width: 100%;
+  height: 8%;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.group_1 {
+  background-color: hsla(var(--ig-surface-500));
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  width: 50%;
+  height: 100%;
+}
+.group_2 {
+  background-color: hsla(var(--ig-gray-900));
+  z-index: 1;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-start;
+  position: sticky;
+  width: 50%;
+  height: 100%;
+  min-width: 50px;
+}
+.button {
+  margin: 0 8px 0 16px;
+}
+.button_1 {
+  --igx-button-foreground: hsla(var(--ig-surface-500));
+  margin: 0 16px 0 0;
+}
+.image {
+  object-fit: scale-down;
+  margin: 0 8px;
+  width: 110px;
+  height: 35px;
+  min-width: 30%;
+  flex-shrink: 0;
+}
+.avatar {
+  --background: none;
+  --ig-gray-400: transparent;
+  margin: 0 16px 0 0;
+}
+.icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+.view-container {
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  height: 92%;
+  min-width: 100%;
+}
+.nav-drawer {
+  min-width: min-content;
+  min-height: 0;
+  flex-shrink: 0;
+}

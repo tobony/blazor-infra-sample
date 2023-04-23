@@ -1,0 +1,42 @@
+<div class="column-layout left">
+  <div class="column-layout form">
+    <div class="column-layout group">
+      <div class="column-layout group_1">
+        <h3 class="h3">
+          Sign up
+        </h3>
+        <p class="ig-typography__body-2 text">
+          Don't have an account? Sign up now for free and enjoy thousands of great travel opportunities
+        </p>
+      </div>
+      <igx-input-group type="border" class="input">
+        <input type="text" placeholder="myname@website.com" igxInput />
+        <label igxLabel>Email</label>
+      </igx-input-group>
+      <igx-input-group type="border" class="input">
+        <input type="text" placeholder="Min 8 characters" igxInput />
+        <label igxLabel>Password</label>
+      </igx-input-group>
+      <igx-input-group type="border" class="input">
+        <input type="text" placeholder="Min 8 characters" igxInput />
+        <label igxLabel>Repeat Password</label>
+      </igx-input-group>
+      <div class="row-layout group_2">
+        <div class="row-layout group_3">
+          <igx-checkbox labelPosition="after" [checked]="true" [indeterminate]="false" class="checkbox">
+            Remember me
+          </igx-checkbox>
+        </div>
+      </div>
+      <button igxButton="raised" igxRipple routerLink="/in-app/dashboard" class="button">
+        sign up
+      </button>
+    </div>
+    <div class="column-layout group_4">
+      <button igxButton="outlined" igxRipple routerLink="/home/login" class="button_1">
+        Already have a registration?
+      </button>
+    </div>
+  </div>
+</div>
+<div class="column-layout right"></div>

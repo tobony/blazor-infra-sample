@@ -1,0 +1,150 @@
+<div class="row-layout group">
+  <div class="column-layout group_1">
+    <div class="column-layout group_2">
+      <div class="column-layout group_3">
+        <h4 class="h4">
+          Hi, Sarah!
+        </h4>
+        <p class="ig-typography__subtitle-1 text">
+          We have some great suggestions for your next travel! We've searched the whole web to provide you with these rare findings - special for you!
+        </p>
+      </div>
+    </div>
+    <div class="column-layout group_4">
+      <div class="row-layout group_5">
+        <h6 class="h6">
+          Latest in articles
+        </h6>
+        <button igxButton="outlined" igxRipple routerLink="/in-app/articles" class="button">
+          view all ARTICLES
+        </button>
+      </div>
+      <div class="row-layout group_6">
+        <igx-card type="outlined" *ngFor="let item of travelAppDataSelectedArticles" class="card">
+          <igx-card-media height="120px">
+            <img [src]="item.image_url" class="image" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+              {{ item.title }}
+            </h3>
+            <h5 igxCardHeaderSubtitle>
+              {{ item.subtitle }}
+            </h5>
+          </igx-card-header>
+          <igx-card-actions [reverse]="true" class="actions-content">
+            <button igxButton="outlined" igxRipple class="button_1">
+              read
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                bookmark_border
+              </igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                share
+              </igx-icon>
+            </button>
+          </igx-card-actions>
+        </igx-card>
+        <div class="column-layout group_7">
+          <button igxButton="outlined" igxRipple routerLink="/in-app/articles" class="button_1">
+            VIEW ALL
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="column-layout group_8">
+      <div class="row-layout group_9">
+        <h6 class="h6">
+          Destinations
+        </h6>
+        <button igxButton="outlined" igxRipple class="button">
+          VIEW ALL DESTINATIONS
+        </button>
+      </div>
+      <div class="row-layout group_6">
+        <igx-card type="outlined" *ngFor="let item of travelAppDataDestinations" class="card">
+          <igx-card-media height="120px">
+            <img [src]="item.image_url" class="image" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+              {{ item.title }}
+            </h3>
+            <h5 igxCardHeaderSubtitle>
+               
+            </h5>
+          </igx-card-header>
+          <igx-card-actions [reverse]="true" class="actions-content">
+            <button igxButton="outlined" igxRipple class="button_1">
+              view
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                bookmark_border
+              </igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                share
+              </igx-icon>
+            </button>
+          </igx-card-actions>
+        </igx-card>
+        <div class="column-layout group_7">
+          <button igxButton="outlined" igxRipple class="button_1">
+            discover more
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="column-layout group_10">
+      <div class="row-layout group_9">
+        <h6 class="h6">
+          My travel lists
+        </h6>
+        <button igxButton="outlined" igxRipple class="button">
+          VIEW ALL LISTS
+        </button>
+      </div>
+      <div class="row-layout group_11">
+        <igx-grid [data]="northwindProducts" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" width="100%" height="200px" class="grid">
+          <igx-column field="productID" dataType="number" header="productID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="supplierID" dataType="number" header="supplierID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="categoryID" dataType="number" header="categoryID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="quantityPerUnit" dataType="string" header="quantityPerUnit" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="unitPrice" dataType="number" header="unitPrice" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="unitsInStock" dataType="number" header="unitsInStock" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="unitsOnOrder" dataType="number" header="unitsOnOrder" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="reorderLevel" dataType="number" header="reorderLevel" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="discontinued" dataType="boolean" header="discontinued" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="name" dataType="string" header="name" [sortable]="true" [selectable]="false"></igx-column>
+        </igx-grid>
+      </div>
+    </div>
+  </div>
+  <div class="column-layout group_12">
+    <div class="row-layout group_13">
+      <h6 class="h6">
+        Photos
+      </h6>
+      <button igxButton="outlined" igxRipple class="button">
+        GO TO ALBUM
+      </button>
+    </div>
+    <div class="column-layout group_14">
+      <div class="column-layout group_15">
+        <div class="row-layout group_16">
+          <div class="column-layout group_17">
+            <img [src]="item.image_url" *ngFor="let item of travelAppDataImageSet1" class="image_1" />
+          </div>
+          <div class="column-layout group_17">
+            <img [src]="item.image_url" *ngFor="let item of travelAppDataImageSet11" class="image_1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
